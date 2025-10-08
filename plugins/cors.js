@@ -8,6 +8,6 @@ const cors = require('@fastify/cors')
 module.exports = fp(async function (fastify, opts) {
   fastify.register(cors, {
     // Разрешаем запросы только с этого адреса (наш фронтенд)
-    origin: 'http://localhost:3001' 
+    origin: process.env.FRONTEND_URL 
   })
 })
